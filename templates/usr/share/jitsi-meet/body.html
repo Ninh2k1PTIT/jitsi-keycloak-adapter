@@ -38,7 +38,7 @@ function interceptLoginRequest() {
       _button.onclick = oidcRedirect
     }
   } finally {
-    setTimeout(function() {interceptLoginRequest();}, 1000);
+    setTimeout(function() {interceptLoginRequest();}, 0);
   }
 }
 
