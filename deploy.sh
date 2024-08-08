@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cp /usr/share/jitsi-meet/body.html /usr/share/jitsi-meet/{body.html.$(date +'%H%M%S').bck}
+# cp /usr/share/jitsi-meet/body.html /usr/share/jitsi-meet/{body.html.$(date +'%H%M%S').bck}
 cp templates/usr/share/jitsi-meet/body.html /usr/share/jitsi-meet/
 cp templates/usr/share/jitsi-meet/static/oidc-* /usr/share/jitsi-meet/static/
 
