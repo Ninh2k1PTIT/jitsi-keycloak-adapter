@@ -16,4 +16,4 @@ cp templates/etc/systemd/system/oidc-adapter.service /etc/systemd/system/
 systemctl daemon-reload
 systemctl enable oidc-adapter.service
 systemctl start oidc-adapter.service
-systemctl status oidc-adapter.service
+# systemctl status oidc-adapter.service
