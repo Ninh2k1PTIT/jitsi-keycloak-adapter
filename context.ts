@@ -6,6 +6,9 @@
 // -----------------------------------------------------------------------------
 
 export function createContext(userInfo: Record<string, unknown>) {
+  const realm_access = userInfo.realm_access as { roles: string[] }
+  const conditions = ["ADMIN", "SUPER_ADMIN"]
+
   const context = {
     user: {
       id: userInfo.sub,
@@ -13,6 +16,7 @@ export function createContext(userInfo: Record<string, unknown>) {
       email: userInfo.email || "",
       lobby_bypass: true,
       security_bypass: true,
+      affiliation: realm_access.roles.some(role => conditions.includes(role)) ? "owner" : "member"
     },
   };
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# cp /usr/share/jitsi-meet/body.html /usr/share/jitsi-meet/{body.html.$(date +'%H%M%S').bck}
+cp /usr/share/jitsi-meet/body.html /usr/share/jitsi-meet/{body.html.bck}
 cp templates/usr/share/jitsi-meet/body.html /usr/share/jitsi-meet/
 cp templates/usr/share/jitsi-meet/static/oidc-* /usr/share/jitsi-meet/static/
 
@@ -15,5 +15,3 @@ cp templates/etc/systemd/system/oidc-adapter.service /etc/systemd/system/
 
 systemctl daemon-reload
 systemctl enable oidc-adapter.service
-systemctl start oidc-adapter.service
-# systemctl status oidc-adapter.service
